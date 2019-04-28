@@ -60,7 +60,7 @@
 ## 问题反馈
 
 * 直接提 issue
-* 个人博客 https://log.maoxianplay.com 上面有联系方式
+* 个人博客 https://blog.maoxianplay.com 上面有联系方式
 * 邮箱： sunnydog0826@gmail.com
 
 ## 代码许可
