@@ -6,9 +6,6 @@
 * kubernetes集群中安装了istio，需要使用```istioctl```命令，但是集群节点并没有安装```istioctl```，需要在本地终端操作
 * 不愿频繁编辑 ```.kube``` 目录中的config文件的同学
 
-## 2019-04-28 更新内容
-新增增量合并，在已使用本脚本合并后的 kubeconfig 后，可以使用 ```-a addfilename -t tofilename``` 参数将新的配置合并到原来已经合并好的文件中
-
 ## 注意事项
 * 使用本脚本合并前，请先备份您您的配置文件，以免发生意外
 * 使用增量添加时，默认新增文件在```merge.py```同级目录，使用相对路径
@@ -55,6 +52,10 @@
 * 切换kubernetes配置
 
         kubectl config use-context {your-contexts}
+  
+## 2019-04-28 更新内容
+新增增量合并，在已使用本脚本合并后的 kubeconfig 后，可以使用 ```-a addfilename -t tofilename``` 参数将新的配置合并到原来已经合并好的文件中
+
         
 ## 问题反馈
 
