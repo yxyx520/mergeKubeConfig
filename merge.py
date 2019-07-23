@@ -113,7 +113,8 @@ def loadYamlFile(path):
     :return:
     """
     with open(path, 'r') as f:
-        return yaml.load(f.read(), Loader=yaml.FullLoader)
+        #return yaml.load(f.read(), Loader=yaml.FullLoader)
+        return yaml.load(f.read())
 
 
 def handleAddConfig(addfile, oldconfig):
@@ -152,7 +153,8 @@ def handleYaml(c, filename):
     for i, context in enumerate(c.get('contexts', '')):
         cluster = context['context']['cluster']
         user = context['context']['user']
-        name = filename + '-' + str(i)
+        #name = filename + '-' + str(i)
+        name = filename
         context['name'] = name
         ALLCONTEXTS.append(name)
 
@@ -183,7 +185,8 @@ def handleConfig(path, filename):
     :return:
     """
     with open(path, 'r') as f:
-        all = yaml.load(f.read(), Loader=yaml.FullLoader)
+        #all = yaml.load(f.read(), Loader=yaml.FullLoader)
+        all = yaml.load(f.read())
         result = handleYaml(all, filename)
         KUBECONFIG['clusters'].extend(result.get('clusters', ''))
         KUBECONFIG['users'].extend(result.get('users', ''))
